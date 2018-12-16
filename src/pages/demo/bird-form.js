@@ -93,6 +93,12 @@ const fields=[
     groupName:'扩展信息'
   },
   {
+    name: '按鈕',
+    key: 'button',
+    fieldType: 'button',
+    groupName:'扩展信息'
+  },
+  {
     name: '内容',
     key: 'content',
     fieldType: 'richtext',

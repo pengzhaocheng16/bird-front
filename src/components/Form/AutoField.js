@@ -7,6 +7,7 @@ import BirdCascader from './BirdCascader';
 import BirdMulti from './BirdMulti';
 import BraftEditor from './BraftEditor';
 import BirdUpload from '../File/BirdUpload';
+import BirdButton from './BirdButton';
 
 import { Form, Input, DatePicker, Switch, Icon, InputNumber, Tooltip } from 'antd';
 
@@ -156,7 +157,12 @@ class AutoField extends React.Component {
           contentId: field.key,
           onChange: value => self.onChange(value),
           innerProps: innerProps
-        }} />;
+    }} />;
+      case "button":
+        return <BirdButton permission={'sys:authorize:user:add'}
+                           idempotency={true}
+                           type="primary"
+                           color="error">权限按钮</BirdButton>;
       default:
         return <span />;
     }
